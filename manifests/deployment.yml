@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: arkadiusznowakpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arkadiusznowakpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: arkadiusznowakpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: arkadiusznowakpipelinesjavascriptdocker 
+          image: mycontainerregistryan.azurecr.io/arkadiusznowakpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
